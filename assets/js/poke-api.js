@@ -32,7 +32,6 @@ pokeApi.getPokemonById = (id) => {
 
             const pokemon = convertPokeApiDetailToPokemon(pokeDetail)
 
-            // 👉 AQUI CRIA OS DETALHES
             const detalhes = new Detalhes()
 
             detalhes.specie = pokeDetail.species.name
@@ -42,7 +41,6 @@ pokeApi.getPokemonById = (id) => {
                 .map(a => a.ability.name)
                 .join(", ")
 
-            // 👉 ASSOCIA NO POKEMON
             pokemon.pokedexDetail = detalhes
 
             return pokemon
